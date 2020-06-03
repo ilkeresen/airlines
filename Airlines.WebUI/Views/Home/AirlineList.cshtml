@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Flight>
+@{
+    ViewData["Title"] = "AirlineList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Uçuş Listesi</h1>
+        <div class="card mb-4">
+            <div class="card-header"><i class="fas fa-calendar-alt mr-1"></i>Tüm Uçuşlar</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTables" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Kalkış</th>
+                                <th>Varış</th>
+                                <th>Fiyat</th>
+                                <th>Uçuş Numarası</th>
+                                <th>Tarih</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>Kalkış</th>
+                                <th>Varış</th>
+                                <th>Fiyat</th>
+                                <th>Uçuş Numarası</th>
+                                <th>Tarih</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@item.FlightId</th>
+                                    <td>@item.Departure</td>
+                                    <td>@item.Arrival</td>
+                                    <td>@item.Price</td>
+                                    <td>@item.AirlineNumber</td>
+                                    <td>@item.FlightDate</td>
+                                    <td>
+                                        <a class="btn btn-success" asp-controller="Home" asp-action="AirlineEdit" asp-route-id="@item.FlightId">Güncelle</a>
+                                        <a class="btn btn-danger" asp-controller="Home" asp-action="AirlineDelete" asp-route-id="@item.FlightId">Sil</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

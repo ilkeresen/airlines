@@ -1,0 +1,26 @@
+﻿@model User
+@{
+    ViewData["Title"] = "UserDelete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Kullanıcı Silme</h1>
+        <div class="card mb-4">
+            <div class="card-header"><i class="fas fa-user-alt mr-1"></i>Kullanıcı Sil</div>
+            <div class="card-body">
+                <div class="alert alert-danger">
+                    <b>@Model.UserId</b> ID <b>@Model.UserName</b> İsimli <b>@Model.UserEmail</b> E-Posta Adresli <b>@Model.UserPhone</b> Telefon numaralı kullanıcıyı silmek istiyor musunuz?
+                </div>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Users" asp-action="UserDelete" method="post">
+                    <input type="hidden" asp-for="UserId" />
+                    <button type="submit" class="btn btn-danger">Kayıt Sil</button>
+                    <a class="btn btn-info" asp-controller="Users" asp-action="UserList"> Kullanıcı Listesine Dön </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<User>
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <main>
+        <div class="container-fluid">
+            <h1 class="mt-4">Kullanıcı Listesi</h1>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-user mr-1"></i>Tüm Kullanıcılar</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTables" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Kullanıcı Yetki</th>
+                                    <th>Kullanıcı Ad Soyad</th>
+                                    <th>Kullanıcı E-Posta</th>
+                                    <th>Kullanıcı Şifre</th>
+                                    <th>Kullanıcı Telefon</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Kullanıcı Yetki</th>
+                                    <th>Kullanıcı Ad Soyad</th>
+                                    <th>Kullanıcı E-Posta</th>
+                                    <th>Kullanıcı Şifre</th>
+                                    <th>Kullanıcı Telefon</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@item.UserId</th>
+                                        <td>@item.UserAuthority</td>
+                                        <td>@item.UserName</td>
+                                        <td>@item.UserEmail</td>
+                                        <td>@item.UserPassword</td>
+                                        <td>@item.UserPhone</td>
+                                        <td>
+                                            <a class="btn btn-success" asp-controller="Users" asp-action="UserEdit" asp-route-id="@item.UserId">Güncelle</a>
+                                            <a class="btn btn-danger" asp-controller="Users" asp-action="UserDelete" asp-route-id="@item.UserId">Sil</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>

@@ -1,0 +1,39 @@
+﻿@model User
+@{
+    ViewData["Title"] = "UserCreate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <main>
+        <div class="container-fluid">
+            <h1 class="mt-4">Kullanıcı Ekle</h1>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-user-plus mr-1"></i>Kullanıcı Ekle</div>
+                <div class="card-body">
+                    <form asp-controller="Users" asp-action="UserCreate" method="post">
+                        <div class="form-group">
+                            <label asp-for="UserAuthority">Kullanıcı Yetki</label>
+                            <input class="form-control" asp-for="UserAuthority" placeholder="Kullanıcı Yetki" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserName">Kullanıcı Ad Soyad</label>
+                            <input class="form-control" asp-for="UserName" placeholder="Kullanıcı Ad Soyad" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserEmail">Kullanıcı E-Posta</label>
+                            <input type="email" class="form-control" asp-for="UserEmail" placeholder="Kullanıcı E-Posta" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserPassword">Kullanıcı Şifre</label>
+                            <input type="password" class="form-control" asp-for="UserPassword" placeholder="Kullanıcı Şifre" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserPhone">Kullanıcı Telefon</label>
+                            <input type="tel" class="form-control" asp-for="UserPhone" placeholder="Kullanıcı Telefon" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kayıt Et</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>

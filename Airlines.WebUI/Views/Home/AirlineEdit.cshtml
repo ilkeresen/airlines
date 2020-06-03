@@ -1,0 +1,41 @@
+﻿@model Flight
+@{
+    ViewData["Title"] = "AirlineEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <main>
+        <div class="container-fluid">
+            <h1 class="mt-4">Uçuş Listesi</h1>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-calendar-plus mr-1"></i>Uçuş Ekle</div>
+                <div class="card-body">
+                    <form asp-controller="Home" asp-action="AirlineEdit" method="post">
+                        <input type="hidden" asp-for="FlightId" />
+                        <div class="form-group">
+                            <label asp-for="Departure">Kalkacağı Şehir</label>
+                            <input class="form-control" asp-for="Departure" placeholder="Kalkacağı Şehir" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Arrival">Varacağı Şehir</label>
+                            <input class="form-control" asp-for="Arrival" placeholder="Varacağı Şehir" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price">Bilet Ücreti</label>
+                            <input class="form-control" asp-for="Price" placeholder="Bilet Ücreti" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AirlineNumber">Uçuş Numarası</label>
+                            <input class="form-control" asp-for="AirlineNumber" placeholder="Uçuş Numarası" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FlightDate">Kalkacağı Şehir</label>
+                            <input type="date" class="form-control" asp-for="FlightDate" placeholder="Kalkacağı Şehir" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Kayıt Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
