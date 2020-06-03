@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Airlines.WebUI.Controllers
 {
-    [Authorize]
+    
     public class UsersController : Controller
     {
         private IUserRepository userRepository;
@@ -50,8 +50,7 @@ namespace Airlines.WebUI.Controllers
 
                 //Create the identity for the user
                 identity = new ClaimsIdentity(new[] {
-                    new Claim(ClaimTypes.Email, UserEmail),
-                    new Claim(ClaimTypes.Role, "Admin")
+                    new Claim(ClaimTypes.Name, UserEmail),
                 }, CookieAuthenticationDefaults.AuthenticationScheme);
 
                 isAuthenticated = true;
@@ -63,7 +62,7 @@ namespace Airlines.WebUI.Controllers
 
                 var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("AirlineList", "Home");
             }
             return View();
         }

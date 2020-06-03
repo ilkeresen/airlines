@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Data\\Airlines.Data.csproj": {}
+    "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Data\\Airlines.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Data\\Airlines.Data.csproj": {
+    "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Data\\Airlines.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Data\\Airlines.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Data\\Airlines.Data.csproj",
         "projectName": "Airlines.Data",
-        "projectPath": "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Data\\Airlines.Data.csproj",
-        "packagesPath": "C:\\Users\\İlker ESEN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Data\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Data\\Airlines.Data.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\İlker ESEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Entity\\Airlines.Entity.csproj": {
-                "projectPath": "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Entity\\Airlines.Entity.csproj"
+              "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Entity\\Airlines.Entity.csproj": {
+                "projectPath": "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Entity\\Airlines.Entity.csproj"
               }
             }
           }
@@ -61,32 +61,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Entity\\Airlines.Entity.csproj": {
+    "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Entity\\Airlines.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Entity\\Airlines.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Entity\\Airlines.Entity.csproj",
         "projectName": "Airlines.Entity",
-        "projectPath": "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Entity\\Airlines.Entity.csproj",
-        "packagesPath": "C:\\Users\\İlker ESEN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\İlker ESEN\\Source\\Repos\\Airlines\\Airlines.Entity\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Entity\\Airlines.Entity.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\source\\repos\\airlines\\airlines\\Airlines.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\İlker ESEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -119,18 +113,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

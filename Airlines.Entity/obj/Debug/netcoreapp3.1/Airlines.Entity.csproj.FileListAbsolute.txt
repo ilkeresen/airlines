@@ -7,3 +7,12 @@ C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Entity\obj\Debug\netcoreapp3
 C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.dll
 C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.pdb
 C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\bin\Debug\netcoreapp3.1\Airlines.Entity.deps.json
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\bin\Debug\netcoreapp3.1\Airlines.Entity.dll
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\bin\Debug\netcoreapp3.1\Airlines.Entity.pdb
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.csprojAssemblyReference.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.AssemblyInfo.cs
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.dll
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Entity\obj\Debug\netcoreapp3.1\Airlines.Entity.pdb

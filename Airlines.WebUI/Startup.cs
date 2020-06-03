@@ -39,13 +39,14 @@ namespace Airlines.WebUI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-
-            services.AddTransient<IAirlineRepository, EfAirlineRepository>();
-            services.AddTransient<IUserRepository, EfUserRepository>();
+            services.AddScoped<IAirlineRepository, EfAirlineRepository>();
+            services.AddScoped<IUserRepository, EfUserRepository>();
             services.AddDbContext<AirlinesContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),b=>b.MigrationsAssembly("Airlines.WebUI")));
+
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+
             services.AddControllersWithViews();
         }
 
@@ -65,13 +66,14 @@ namespace Airlines.WebUI
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseAuthentication();
+
             app.UseRouting();
 
             app.UseAuthorization();
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
