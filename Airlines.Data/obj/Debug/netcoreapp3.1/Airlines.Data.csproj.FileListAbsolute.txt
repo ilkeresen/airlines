@@ -10,3 +10,27 @@ C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Data\obj\Debug\netcoreapp3.1
 C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.dll
 C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.pdb
 C:\Users\İlker ESEN\Source\Repos\Airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Data.deps.json
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Data.dll
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Data.pdb
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Entity.dll
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Entity.pdb
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.csprojAssemblyReference.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.AssemblyInfo.cs
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.csproj.CopyComplete
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.dll
+C:\Users\Asus\source\repos\airlines\airlines\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.pdb
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Data.deps.json
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Data.dll
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Data.pdb
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Entity.dll
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\bin\Debug\netcoreapp3.1\Airlines.Entity.pdb
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.csprojAssemblyReference.cache
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.AssemblyInfoInputs.cache
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.AssemblyInfo.cs
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.csproj.CoreCompileInputs.cache
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.csproj.CopyComplete
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.dll
+C:\Users\İlker ESEN\Desktop\airlines-master\Airlines.Data\obj\Debug\netcoreapp3.1\Airlines.Data.pdb

@@ -41,9 +41,13 @@ namespace Airlines.Data.Concrete.EfCore
         {
             return context.Users.FirstOrDefault(p => p.UserId == UserId);
         }
-        public User GetByName(string UserName)
+        public User GetByLogin(string UserEmail, string UserPassword)
         {
-            return context.Users.FirstOrDefault(p => p.UserName == UserName);
+            return context.Users.Where(p => p.UserEmail == UserEmail && p.UserPassword == UserPassword).FirstOrDefault();
+        }
+        public User GetByEmail(string UserEmail)
+        {
+            return context.Users.FirstOrDefault(p => p.UserEmail == UserEmail);
         }
         public User GetByPassword(string UserPassword)
         {

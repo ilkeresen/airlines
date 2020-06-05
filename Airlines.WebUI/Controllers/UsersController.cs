@@ -14,10 +14,11 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Airlines.WebUI.Controllers
 {
-    [Authorize]
+
     public class UsersController : Controller
     {
         private IUserRepository userRepository;
@@ -39,40 +40,41 @@ namespace Airlines.WebUI.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-
-            //Check the user name and password
-            //Here can be implemented checking logic from the database
             ClaimsIdentity identity = null;
             bool isAuthenticated = false;
 
-            if (UserEmail == "ilkeresen@hotmail.com" && UserPassword == "password")
-            {
+            var userControl = userRepository.GetByLogin(UserEmail,UserPassword);
 
-                //Create the identity for the user
+            if (userControl != null)
+            {
                 identity = new ClaimsIdentity(new[] {
-                    new Claim(ClaimTypes.Email, UserEmail),
-                    new Claim(ClaimTypes.Role, "Admin")
+                    new Claim(ClaimTypes.Name, UserEmail),
+                    new Claim(ClaimTypes.Role, userControl.UserAuthority),
                 }, CookieAuthenticationDefaults.AuthenticationScheme);
 
                 isAuthenticated = true;
             }
-
+            else
+            {
+                TempData["message"] = "Böyle bir kullanıcı bulunmuyor. Lütfen tekrar deneyiniz.";
+                return RedirectToAction("Index", "Home");
+            }
             if (isAuthenticated)
             {
                 var principal = new ClaimsPrincipal(identity);
 
                 var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("AirlineList", "Home");
             }
+
             return View();
         }
 
-        [HttpPost]
         public IActionResult UserLogout()
         {
             var login = HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Index", "Users");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult UserList()

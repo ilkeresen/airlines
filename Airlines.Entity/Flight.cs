@@ -21,7 +21,7 @@ namespace Airlines.Entity
         [Required]
         public decimal Price { get; set; }
 
-        public  Plane Plane { get; set; }
+        public Plane PlaneId { get; set; }
 
         public int AirlineNumber { get; set; }
 

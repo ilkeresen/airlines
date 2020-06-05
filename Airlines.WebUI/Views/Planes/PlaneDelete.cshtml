@@ -1,0 +1,26 @@
+﻿@model Plane
+@{
+    ViewData["Title"] = "PlaneDelete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <main>
+        <div class="container-fluid">
+            <h1 class="mt-4">Uçak Silme</h1>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-plane mr-1"></i>Uçak Sil</div>
+                <div class="card-body">
+                    <div class="alert alert-danger">
+                        <b>@Model.PlaneId</b> ID <b>@Model.PlaneName</b> İsimli <b>@Model.PlaneType</b> Tipli uçak kaydını silmek istiyor musunuz?
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form asp-controller="Planes" asp-action="PlaneDelete" method="post">
+                        <input type="hidden" asp-for="PlaneId" />
+                        <button type="submit" class="btn btn-danger">Kayıt Sil</button>
+                        <a class="btn btn-info" asp-controller="Planes" asp-action="PlaneList"> Uçak Listesine Dön </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>

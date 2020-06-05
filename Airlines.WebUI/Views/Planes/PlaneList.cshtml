@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Plane>
+@{
+    ViewData["Title"] = "PlaneList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <main>
+        <div class="container-fluid">
+            <h1 class="mt-4">Uçak Listesi</h1>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-plane mr-1"></i>Tüm Uçaklar</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTables" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Uçak Tipi</th>
+                                    <th>Uçak Adı</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Uçak Tipi</th>
+                                    <th>Uçak Adı</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <th scope="row">@item.PlaneId</th>
+                                    <td>@item.PlaneType</td>
+                                    <td>@item.PlaneName</td>
+                                    <td>
+                                        <a class="btn btn-success" asp-controller="Planes" asp-action="PlaneEdit" asp-route-id="@item.PlaneId">Güncelle</a>
+                                        <a class="btn btn-danger" asp-controller="Planes" asp-action="PlaneDelete" asp-route-id="@item.PlaneId">Sil</a>
+                                    </td>
+                                </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>

@@ -1,0 +1,42 @@
+﻿@model Plane
+@{
+    ViewData["Title"] = "PlaneEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <main>
+        <div class="container-fluid">
+            <h1 class="mt-4">Uçak Güncelle</h1>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-plane mr-1"></i>Uçak Güncelle</div>
+                <div class="card-body">
+                    <form asp-controller="Planes" asp-action="PlaneEdit" method="post">
+                        <input type="hidden" asp-for="PlaneId" />
+                        <div class="form-group">
+                            <label asp-for="PlaneName">Uçak Ad</label>
+                            <input class="form-control" asp-for="PlaneName" required>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PlaneType">Uçak Tip</label>
+                            <select class="form-control" asp-for="PlaneType" required>
+                                <option value="Boeing 787-9 Dreamliner">Boeing 787-9 Dreamliner</option>
+                                <option value="B777-300 ER">B777-300 ER</option>
+                                <option value="A330-300">A330-300</option>
+                                <option value="A330-200">A330-200</option>
+                                <option value="B737-MAX 9">B737-MAX 9</option>
+                                <option value="B737-900 ER">B737-900 ER</option>
+                                <option value="B737 MAX 8">B737 MAX 8</option>
+                                <option value="B737-800">B737-800</option>
+                                <option value="B737-700">B737-700</option>
+                                <option value="A321neo">A321neo</option>
+                                <option value="A321-200">A321-200</option>
+                                <option value="A320-200">A320-200</option>
+                                <option value="A319-132/100">A319-132/100</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success">Kayıt Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>

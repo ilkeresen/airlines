@@ -19,6 +19,7 @@
                                 <th>Varış</th>
                                 <th>Fiyat</th>
                                 <th>Uçuş Numarası</th>
+                                <th>Uçak İsmi</th>
                                 <th>Tarih</th>
                                 <th>İşlemler</th>
                             </tr>
@@ -30,6 +31,7 @@
                                 <th>Varış</th>
                                 <th>Fiyat</th>
                                 <th>Uçuş Numarası</th>
+                                <th>Uçak İsmi</th>
                                 <th>Tarih</th>
                                 <th>İşlemler</th>
                             </tr>
@@ -43,6 +45,7 @@
                                     <td>@item.Arrival</td>
                                     <td>@item.Price</td>
                                     <td>@item.AirlineNumber</td>
+                                    <td>@item.PlaneId</td>
                                     <td>@item.FlightDate</td>
                                     <td>
                                         <a class="btn btn-success" asp-controller="Home" asp-action="AirlineEdit" asp-route-id="@item.FlightId">Güncelle</a>

@@ -10,6 +10,8 @@ using Airlines.Data.Abstract;
 using Airlines.Entity;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Airlines.WebUI.Controllers
 {
@@ -18,15 +20,21 @@ namespace Airlines.WebUI.Controllers
     public class HomeController : Controller
     {
         private IAirlineRepository airlineRepository;
+        private IPlaneRepository planeRepository;
 
-        public HomeController(IAirlineRepository repository)
+        public HomeController(IAirlineRepository repository, IPlaneRepository _planeRepository)
         {
             airlineRepository = repository;
+            planeRepository = _planeRepository;
         }
 
         [AllowAnonymous]
         public IActionResult Index()
         {
+            if (HttpContext.User.Claims.Any())
+            {
+                return RedirectToAction("AirlineList");
+            }
             return View();
         }
 
@@ -38,7 +46,7 @@ namespace Airlines.WebUI.Controllers
         [HttpGet]
         public IActionResult AirlineCreate()
         {
-            //ViewBag.Airlines = new SelectList(airlineRepository.GetAll(), "AirlineId", "AirlineNumber").Count()+1;
+            ViewBag.PlanesName = new SelectList(planeRepository.GetAll(), "PlaneId", "PlaneName");
 
             return View();
         }

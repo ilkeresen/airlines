@@ -30,7 +30,10 @@ namespace Airlines.WebUI
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.ConfigureApplicationCookie(opt => opt.LoginPath = "/Users/UserLogin");
+            //services.ConfigureApplicationCookie(opt => opt.LoginPath = "/Users/UserLogin");
+            services.ConfigureApplicationCookie(options => {
+                options.LoginPath = "/Home/Index";
+            });
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -39,13 +42,15 @@ namespace Airlines.WebUI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+
+            services.AddScoped<IAirlineRepository, EfAirlineRepository>();
+            services.AddScoped<IUserRepository, EfUserRepository>();
+            services.AddScoped<IPlaneRepository, EfPlaneRepository>();
+            services.AddDbContext<AirlinesContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Airlines.WebUI")));
+
+
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-
-            services.AddTransient<IAirlineRepository, EfAirlineRepository>();
-            services.AddTransient<IUserRepository, EfUserRepository>();
-            services.AddDbContext<AirlinesContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),b=>b.MigrationsAssembly("Airlines.WebUI")));
             services.AddControllersWithViews();
         }
 
@@ -65,13 +70,14 @@ namespace Airlines.WebUI
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseAuthentication();
+
             app.UseRouting();
 
             app.UseAuthorization();
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
