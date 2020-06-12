@@ -34,16 +34,16 @@ namespace Airlines.Data.Concrete.EfCore
             {
                 context.Flights.AddRange(
 
-                    new Flight() { Departure = "İstanbul", Arrival = "Ankara", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 1, Price = 150 },
-                    new Flight() { Departure = "İstanbul", Arrival = "İzmir", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 2, Price = 200 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Yozgat", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 3, Price = 130 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Antalya", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 4, Price = 200 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Balıkesir", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 5, Price = 150 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Trabzon", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 6, Price = 210 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Çanakkale", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 7, Price = 120 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Hakkari", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 8, Price = 300 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Van", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 9, Price = 300 },
-                    new Flight() { Departure = "İstanbul", Arrival = "Mardin", FlightDate = DateTime.Now.AddDays(-5), AirlineNumber = 10, Price = 300 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Ankara", FlightDate = DateTime.Now.AddDays(-45), AirlineNumber = 1, Price = 150 },
+                    new Flight() { Departure = "İstanbul", Arrival = "İzmir", FlightDate = DateTime.Now.AddDays(-10), AirlineNumber = 2, Price = 200 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Yozgat", FlightDate = DateTime.Now.AddDays(-4), AirlineNumber = 3, Price = 130 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Antalya", FlightDate = DateTime.Now.AddDays(-32), AirlineNumber = 4, Price = 200 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Balıkesir", FlightDate = DateTime.Now.AddDays(-34), AirlineNumber = 5, Price = 150 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Trabzon", FlightDate = DateTime.Now.AddDays(-24), AirlineNumber = 6, Price = 210 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Çanakkale", FlightDate = DateTime.Now.AddDays(-15), AirlineNumber = 7, Price = 120 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Hakkari", FlightDate = DateTime.Now.AddDays(-12), AirlineNumber = 8, Price = 300 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Van", FlightDate = DateTime.Now.AddDays(-22), AirlineNumber = 9, Price = 300 },
+                    new Flight() { Departure = "İstanbul", Arrival = "Mardin", FlightDate = DateTime.Now.AddDays(-30), AirlineNumber = 10, Price = 300 },
                     new Flight() { Departure = "İstanbul", Arrival = "Samsun", FlightDate = DateTime.Now.AddDays(-20), AirlineNumber = 11, Price = 250 }
 
                 );

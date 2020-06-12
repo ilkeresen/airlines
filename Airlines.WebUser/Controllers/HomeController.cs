@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Airlines.WebUser.Models;
+using Airlines.Data.Abstract;
 
 namespace Airlines.WebUser.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        IAirlineRepository airlineRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IAirlineRepository _airlineRepository)
         {
-            _logger = logger;
+            airlineRepository = _airlineRepository;
         }
 
         public IActionResult Index()
@@ -23,8 +24,15 @@ namespace Airlines.WebUser.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult GetList(string Departure, string Arrival, DateTime Date)
         {
+            var airlineControl = airlineRepository.GetByName(Departure, Arrival, Date);
+            if (airlineControl != null)
+            {
+                return View(airlineControl);
+            }
+
             return View();
         }
 

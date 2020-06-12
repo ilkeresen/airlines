@@ -38,7 +38,7 @@ namespace Airlines.Data.Concrete.EfCore
 
         public Flight GetByName(string Departure, string Arrival, DateTime Date)
         {
-            throw new NotImplementedException();
+            return context.Flights.Where(p => p.Departure == Departure && p.Arrival == Arrival && p.FlightDate == Date).FirstOrDefault();
         }
 
         public Flight GetById(int FlightId)
